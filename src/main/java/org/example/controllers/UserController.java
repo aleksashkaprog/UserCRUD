@@ -1,22 +1,75 @@
-package org.example;
+package org.example.controllers;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
 
-@Controller
-@RequestMapping("/users")
+import org.example.models.User;
+
+
+import org.example.models.UserRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+@RestController
 public class UserController {
-    @GetMapping()
-    public String index(Model model) {
-        return null;
+
+    @Autowired
+    private UserRepository userRepository;
+
+    @GetMapping("/users")
+    public List<User> list() {
+
+        Iterable<User> userIterable = userRepository.findAll();
+        ArrayList<User> users = new ArrayList<>();
+        for(User user : userIterable) {
+            users.add(user);
+        }
+
+        return users;
+    }
+
+    @PostMapping( "/users")
+    public int add (User user) {
+
+        User newUser = userRepository.save(user);
+        return newUser.getId();
+    }
+
+
+    @GetMapping("/users/{id}")
+    public ResponseEntity get(@PathVariable int id) {
+
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (!optionalUser.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        return new ResponseEntity(optionalUser.get(), HttpStatus.OK);
 
     }
 
-    @GetMapping("/{id}")
-    public  String ahow(@PathVariable("id") int id, Model model) {
-        return null;
+    @PutMapping("/users/{id}")
+    public ResponseEntity put(@PathVariable int id, User user) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (!optionalUser.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        User updateUser = userRepository.save(user);
+        return new ResponseEntity(updateUser, HttpStatus.OK);
+
+    }
+
+    @DeleteMapping("/users/{id}")
+    public ResponseEntity delete(@PathVariable int id) {
+        Optional<User> optionalUser = userRepository.findById(id);
+        if (!optionalUser.isPresent()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(null);
+        }
+        userRepository.deleteById(id);
+        return ResponseEntity.status(HttpStatus.OK).body("Success delete");
+
     }
 }
