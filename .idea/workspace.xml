@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f8c291c-6caa-484e-98ac-6c0abdb7cf4d" name="Changes" comment="">
+    <list default="true" id="6f8c291c-6caa-484e-98ac-6c0abdb7cf4d" name="Changes" comment="first_commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/PersonController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/PersonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/controllers/PersonControllerTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/models/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/UserRepository.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +23,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="JUnit5 Test Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,6 +57,8 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -63,7 +68,81 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="org.example.controllers" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="org.example.controllers" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PersonControllerTests">
+    <configuration name="PersonControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserCRUD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonControllerTests.addPersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserCRUD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
+      <option name="METHOD_NAME" value="addPersonTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonControllerTests.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserCRUD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
+      <option name="METHOD_NAME" value="addUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonControllerTests.getUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="UserCRUD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.controllers.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
+      <option name="METHOD_NAME" value="getUserTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="UserCRUD" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.Main" />
@@ -79,7 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PersonControllerTests" />
         <item itemvalue="Spring Boot.Main" />
+        <item itemvalue="JUnit.PersonControllerTests.addPersonTest" />
+        <item itemvalue="JUnit.PersonControllerTests.addUserTest" />
+        <item itemvalue="JUnit.PersonControllerTests.getUserTest" />
       </list>
     </recent_temporary>
   </component>
@@ -97,11 +180,33 @@
       <workItem from="1678090841557" duration="7276000" />
       <workItem from="1678158861590" duration="9531000" />
       <workItem from="1678209635212" duration="7507000" />
-      <workItem from="1678340947098" duration="835000" />
+      <workItem from="1678340947098" duration="3339000" />
+      <workItem from="1678365555454" duration="1396000" />
+      <workItem from="1678368384292" duration="7958000" />
+      <workItem from="1678378400881" duration="1618000" />
+      <workItem from="1678380167631" duration="291000" />
+      <workItem from="1678380487356" duration="722000" />
+      <workItem from="1678383769687" duration="5411000" />
+      <workItem from="1678412043415" duration="192000" />
+      <workItem from="1678412596440" duration="751000" />
+      <workItem from="1678413812468" duration="768000" />
+      <workItem from="1678414681419" duration="2779000" />
     </task>
+    <task id="LOCAL-00001" summary="first_commit">
+      <created>1678341928489</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678341928492</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first_commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="first_commit" />
   </component>
 </project>
