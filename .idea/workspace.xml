@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6f8c291c-6caa-484e-98ac-6c0abdb7cf4d" name="Changes" comment="first_commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/PersonController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/models/PersonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/controllers/PersonControllerTests.java" afterDir="false" />
+    <list default="true" id="6f8c291c-6caa-484e-98ac-6c0abdb7cf4d" name="Changes" comment="add-unit-tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/models/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/controllers/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/controllers/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/controllers/PersonControllerUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/controllers/PersonControllerUnitTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +73,8 @@
       <recent name="org.example.controllers" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PersonControllerTests">
-    <configuration name="PersonControllerTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PersonControllerUnitTest">
+    <configuration name="PersonControllerUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserCRUD" />
       <extension name="coverage">
         <pattern>
@@ -89,13 +83,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerUnitTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonControllerTests.addPersonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerUnitTest.add_callPersonRepositoryGetId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserCRUD" />
       <extension name="coverage">
         <pattern>
@@ -104,14 +98,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
-      <option name="METHOD_NAME" value="addPersonTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerUnitTest" />
+      <option name="METHOD_NAME" value="add_callPersonRepositoryGetId" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonControllerTests.addUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerUnitTest.add_callPersonRepositorySave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserCRUD" />
       <extension name="coverage">
         <pattern>
@@ -120,14 +114,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
-      <option name="METHOD_NAME" value="addUserTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerUnitTest" />
+      <option name="METHOD_NAME" value="add_callPersonRepositorySave" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PersonControllerTests.getUserTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerUnitTest.delete_callPersonRepositoryDeleteById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserCRUD" />
       <extension name="coverage">
         <pattern>
@@ -136,33 +130,36 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="org.example.controllers" />
-      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerTests" />
-      <option name="METHOD_NAME" value="getUserTest" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerUnitTest" />
+      <option name="METHOD_NAME" value="delete_callPersonRepositoryDeleteById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+    <configuration name="PersonControllerUnitTest.put_callPersonRepositorySave" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="UserCRUD" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.Main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="org.example.*" />
+          <option name="PATTERN" value="org.example.controllers.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="org.example.controllers" />
+      <option name="MAIN_CLASS_NAME" value="org.example.controllers.PersonControllerUnitTest" />
+      <option name="METHOD_NAME" value="put_callPersonRepositorySave" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PersonControllerTests" />
-        <item itemvalue="Spring Boot.Main" />
-        <item itemvalue="JUnit.PersonControllerTests.addPersonTest" />
-        <item itemvalue="JUnit.PersonControllerTests.addUserTest" />
-        <item itemvalue="JUnit.PersonControllerTests.getUserTest" />
+        <item itemvalue="JUnit.PersonControllerUnitTest" />
+        <item itemvalue="JUnit.PersonControllerUnitTest.delete_callPersonRepositoryDeleteById" />
+        <item itemvalue="JUnit.PersonControllerUnitTest.put_callPersonRepositorySave" />
+        <item itemvalue="JUnit.PersonControllerUnitTest.add_callPersonRepositoryGetId" />
+        <item itemvalue="JUnit.PersonControllerUnitTest.add_callPersonRepositorySave" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +187,7 @@
       <workItem from="1678412043415" duration="192000" />
       <workItem from="1678412596440" duration="751000" />
       <workItem from="1678413812468" duration="768000" />
-      <workItem from="1678414681419" duration="2779000" />
+      <workItem from="1678414681419" duration="11104000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1678341928489</created>
@@ -199,7 +196,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678341928492</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add-unit-tests">
+      <created>1678417573473</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678417573474</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,6 +211,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first_commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first_commit" />
+    <MESSAGE value="add-unit-tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="add-unit-tests" />
   </component>
 </project>

@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
@@ -54,5 +55,99 @@ class PersonControllerUnitTest {
         assertEquals(result.get(0), mockPerson1);
         assertEquals(result.get(1), mockPerson2);
         assertEquals(result.get(2), mockPerson3);
+    }
+
+    @Test
+    void add_callPersonRepositorySave() {
+        // setup
+        Person mockPerson = mock(Person.class);
+
+        // act
+        controller.add(mockPerson);
+
+        // verify
+        verify(mockPersonRepository).save(mockPerson);
+
+
+    }
+
+    @Test
+    void add_callPersonRepositoryGetId() {
+        // setup
+        Person mockPerson = mock(Person.class);
+
+        // act
+        controller.add(mockPerson);
+
+        //verify
+        verify(mockPerson).getId();
+
+    }
+    @Test
+    void get_callPersonRepositoryFindById() {
+        //setUp
+        int id = 1;
+        //act
+        controller.get(id);
+
+        //verify
+        verify(mockPersonRepository).findById(id);
+    }
+
+    @Test
+    void put_callPersonRepositoryFindById() {
+        //setUp
+        int id = 1;
+        Person mockPerson = mock(Person.class);
+
+        //act
+        controller.put(id, mockPerson);
+
+        //verify
+        verify(mockPersonRepository).findById(id);
+    }
+
+    @Test
+    void put_callPersonRepositorySave() {
+        //setUp
+        int id = 1;
+        Person mockPerson = mock(Person.class);
+        Optional<Person> mockPerson1 = mockPersonRepository.findById(id);
+
+
+        //act
+        controller.put(id, mockPerson);
+
+        //verify
+        if (mockPerson1.isPresent()) {
+            verify(mockPersonRepository).save(mockPerson);
+        }
+    }
+
+    @Test
+    void delete_callPersonRepositoryFindById() {
+        //setUp
+        int id = 1;
+
+        //act
+        controller.delete(id);
+
+        //verify
+        verify(mockPersonRepository).findById(id);
+    }
+
+    @Test
+    void delete_callPersonRepositoryDeleteById() {
+        //setUp
+        int id = 1;
+        Optional<Person> mockPerson1 = mockPersonRepository.findById(id);
+
+        //act
+        controller.delete(id);
+
+        //verify
+        if (mockPerson1.isPresent()) {
+            verify(mockPersonRepository).deleteById(id);
+        }
     }
 }

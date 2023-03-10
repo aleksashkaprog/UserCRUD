@@ -14,7 +14,6 @@ import java.util.Optional;
 
 @RestController
 public class PersonController {
-//    @Autowired
     private PersonRepository personRepository;
 
 
@@ -35,8 +34,9 @@ public class PersonController {
     @PostMapping( "/users")
     public int add (Person person) {
 
-        Person newPerson = personRepository.save(person);
-        return newPerson.getId();
+        personRepository.save(person);
+        return person.getId();
+
     }
 
 
