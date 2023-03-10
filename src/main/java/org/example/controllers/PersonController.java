@@ -14,18 +14,21 @@ import java.util.Optional;
 
 @RestController
 public class PersonController {
-    @Autowired
+//    @Autowired
     private PersonRepository personRepository;
+
+
+    public PersonController(PersonRepository personRepository) {
+        this.personRepository = personRepository;
+    }
 
     @GetMapping("/users")
     public List<Person> list() {
-
         Iterable<Person> personIterable = personRepository.findAll();
         ArrayList<Person> people = new ArrayList<>();
         for(Person person : personIterable) {
             people.add(person);
         }
-
         return people;
     }
 
