@@ -10,6 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.anyInt;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -112,16 +113,16 @@ class PersonControllerUnitTest {
         //setUp
         int id = 1;
         Person mockPerson = mock(Person.class);
-        Optional<Person> mockPerson1 = mockPersonRepository.findById(id);
+        var mockOptionalPerson = Optional.of(mockPerson);
+        when(mockPersonRepository.findById(anyInt())).thenReturn(mockOptionalPerson);
 
 
         //act
         controller.put(id, mockPerson);
 
         //verify
-        if (mockPerson1.isPresent()) {
-            verify(mockPersonRepository).save(mockPerson);
-        }
+        verify(mockPersonRepository).save(mockPerson);
+
     }
 
     @Test
@@ -140,14 +141,14 @@ class PersonControllerUnitTest {
     void delete_callPersonRepositoryDeleteById() {
         //setUp
         int id = 1;
-        Optional<Person> mockPerson1 = mockPersonRepository.findById(id);
+        Person mockPerson = mock(Person.class);
+        var mockOptionalPerson = Optional.of(mockPerson);
+        when(mockPersonRepository.findById(anyInt())).thenReturn(mockOptionalPerson);
 
         //act
         controller.delete(id);
 
         //verify
-        if (mockPerson1.isPresent()) {
-            verify(mockPersonRepository).deleteById(id);
-        }
+        verify(mockPersonRepository).deleteById(id);
     }
 }

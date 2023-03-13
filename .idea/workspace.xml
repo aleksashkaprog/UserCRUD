@@ -156,8 +156,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.PersonControllerUnitTest" />
-        <item itemvalue="JUnit.PersonControllerUnitTest.delete_callPersonRepositoryDeleteById" />
         <item itemvalue="JUnit.PersonControllerUnitTest.put_callPersonRepositorySave" />
+        <item itemvalue="JUnit.PersonControllerUnitTest.delete_callPersonRepositoryDeleteById" />
         <item itemvalue="JUnit.PersonControllerUnitTest.add_callPersonRepositoryGetId" />
         <item itemvalue="JUnit.PersonControllerUnitTest.add_callPersonRepositorySave" />
       </list>
@@ -187,7 +187,8 @@
       <workItem from="1678412043415" duration="192000" />
       <workItem from="1678412596440" duration="751000" />
       <workItem from="1678413812468" duration="768000" />
-      <workItem from="1678414681419" duration="11104000" />
+      <workItem from="1678414681419" duration="12599000" />
+      <workItem from="1678684269522" duration="2134000" />
     </task>
     <task id="LOCAL-00001" summary="first_commit">
       <created>1678341928489</created>
@@ -203,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678417573474</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add-unit-tests">
+      <created>1678434395260</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678434395260</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,5 +221,20 @@
     <MESSAGE value="first_commit" />
     <MESSAGE value="add-unit-tests" />
     <option name="LAST_COMMIT_MESSAGE" value="add-unit-tests" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/org/example/controllers/PersonControllerUnitTest.java</url>
+          <line>87</line>
+          <properties class="org.example.controllers.PersonControllerUnitTest" method="get_callPersonRepositoryFindById">
+            <option name="EMULATED" value="true" />
+            <option name="WATCH_EXIT" value="false" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
